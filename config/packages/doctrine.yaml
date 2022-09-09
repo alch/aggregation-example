@@ -11,18 +11,17 @@ doctrine:
     naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
     auto_mapping: true
     mappings:
-      ### Booster ###
-      product:
+      product_domain:
         mapping: true
         type: xml
-        dir: "%kernel.project_dir%/src/Modules/Product/Infrastructure/Persistence/Doctrine/Mapping"
+        dir: "%kernel.project_dir%/src/Modules/Product/Infrastructure/Persistence/Doctrine/Mapping/Domain"
         prefix: 'App\Modules\Product\Domain'
         is_bundle: false
-      category:
+      product_infrastructure:
         mapping: true
         type: xml
-        dir: "%kernel.project_dir%/src/Modules/Product/Infrastructure/Persistence/Doctrine/Mapping"
-        prefix: 'App\Modules\Product\Domain'
+        dir: "%kernel.project_dir%/src/Modules/Product/Infrastructure/Persistence/Doctrine/Mapping/Infrastructure"
+        prefix: 'App\Modules\Product\Infrastructure\Persistence\Doctrine\Entity'
         is_bundle: false
 
 when@test:

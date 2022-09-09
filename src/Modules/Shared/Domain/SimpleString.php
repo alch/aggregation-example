@@ -4,7 +4,7 @@ namespace App\Modules\Shared\Domain;
 
 class SimpleString implements \Stringable
 {
-    protected SimpleString $value;
+    protected string $value;
 
     protected function __construct(string $value)
     {
